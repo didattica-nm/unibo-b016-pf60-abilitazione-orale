@@ -6,209 +6,445 @@
 // Base settings for all themes that can optionally be
 // overridden by the super-theme
 
-// Fonts - consider using https://www.fonttrio.xyz/ for less effort
-
-// Headings
-@import url("../fonts/PlusJakartaSans/PlusJakartaSans.css");
-// Body
-@import url("../fonts/Inter/Inter.css");
+// Fonts
 // Monospace
-@import url("../fonts/JetBrainsMono/JetBrainsMono.css");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
 
-$mainFont: "Inter", sans-serif;
-$headingFont: "Plus Jakarta Sans";
-$codeFont: "JetBrains Mono";
+// Sans-serif
+// @import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
 	You may want a logo to be displayed
 	on the bottom-left of the slides
 */
-$logo: url("../imgs/logo-placeholder.png");
-$author: "G. Samsa";
+$logo: url("../example-background.svg");
 
 $dark-theme: false !default;
 
-// DEFAULT COLORS: LIGHT MODE
-// Background of the presentation
-$backgroundColor: #fefefe;
-
-$mainFontSize: 40px;
-$mainColor: #000000;
-$accentClr: #760000;
-$codeClr: $accentClr;
-
-// Callouts styling
-$success: #28a745;
-$danger: #dc3545;
-$warning: #ffc107;
-$tip: #5a339e;
-$note: #17a2b8;
-$cite: rgb(134, 134, 134);
-
-// Colors used for UI elements that are overlaid on top of
-// the presentation
-$overlayElementBgColor: 240, 240, 240;
-$overlayElementFgColor: 0, 0, 0;
+// Raw color values kept for Sass functions and reveal.js template compilation.
+// CSS custom properties below are the runtime source of truth for our own rules.
+$_backgroundColor: #fefefe;
+$_mainFont: 'Work Sans', sans-serif;
+$_mainFontSize: 40px;
+$_mainColor: #000000;
+$_accentClr: #760000;
+$_codeClr: $_accentClr;
+$_headingColor: #222;
+$_success: #28a745;
+$_danger: #dc3545;
+$_warning: #ffc107;
+$_tip: #5a339e;
+$_note: #17a2b8;
+$_cite: gray;
+$_overlayElementBgColor: 240, 240, 240;
+$_overlayElementFgColor: 0, 0, 0;
+$_selectionBackgroundColor: #{$_accentClr}77;
+$_selectionColor: lighten($_backgroundColor, 10%);
+$_blockMargin: 10px;
+$_headingMargin: 30px 0;
+$_headingFont: 'Merriweather';
+$_headingLineHeight: 1;
+$_headingLetterSpacing: normal;
+$_headingTextShadow: none;
+$_headingFontWeight: normal;
+$_heading1TextShadow: $_headingTextShadow;
+$_heading1Size: 3em;
+$_heading2Size: 2.11em;
+$_heading3Size: 1.55em;
+$_heading4Size: 1.00em;
+$_heading5Size: .80em;
+$_codeFont: monospace;
+$_linkColor: lighten($_accentClr, 20%);
+$_linkColorHover: lighten($_linkColor, 20%);
 
 // OVERRIDES COLORS IF DARK MODE SET TO TRUE
 @if $dark-theme {
-    // Background of the presentation
-    $backgroundColor: #000000;
-
-    $mainFontSize: 40px;
-    $mainColor: white;
-    $accentClr: #760000;
-
-    // Colors used for UI elements that are overlaid on top of
-    // the presentation
-    $overlayElementBgColor: 240, 240, 240;
-    $overlayElementFgColor: 0, 0, 0;
+	$_backgroundColor: #000000;
+	$_mainFont: 'Lato', sans-serif;
+	$_mainFontSize: 40px;
+	$_mainColor: white;
+	$_accentClr: #760000;
+	$_codeClr: rgb(144, 209, 21);
+	$_headingColor: white;
+	$_overlayElementBgColor: 240, 240, 240;
+	$_overlayElementFgColor: 0, 0, 0;
+	$_selectionBackgroundColor: #{$_accentClr}77;
+	$_selectionColor: lighten($_backgroundColor, 10%);
+	$_linkColor: lighten($_accentClr, 20%);
+	$_linkColorHover: lighten($_linkColor, 20%);
 }
 
-// Text selection
-$selectionBackgroundColor: #{$accentClr}77;
-$selectionColor: invert($backgroundColor);
+// 1. Declare CSS variable defaults on :root
+:root {
+	--logo: #{$logo};
+	--backgroundColor: #{$_backgroundColor};
+	--mainFont: #{$_mainFont};
+	--mainFontSize: #{$_mainFontSize};
+	--mainColor: #{$_mainColor};
+	--accentClr: #{$_accentClr};
+	--accentClr-rgb: #{red($_accentClr)}, #{green($_accentClr)}, #{blue($_accentClr)};
+	--codeClr: #{$_codeClr};
+	--headingColor: #{$_headingColor};
+	--success: #{$_success};
+	--danger: #{$_danger};
+	--warning: #{$_warning};
+	--tip: #{$_tip};
+	--note: #{$_note};
+	--cite: #{$_cite};
+	--overlayElementBgColor: #{$_overlayElementBgColor};
+	--overlayElementFgColor: #{$_overlayElementFgColor};
+	--selectionBackgroundColor: #{$_selectionBackgroundColor};
+	--selectionColor: #{$_selectionColor};
+	--blockMargin: #{$_blockMargin};
+	--headingMargin: #{$_headingMargin};
+	--headingFont: #{$_headingFont};
+	--headingLineHeight: #{$_headingLineHeight};
+	--headingLetterSpacing: #{$_headingLetterSpacing};
+	--headingTextShadow: #{$_headingTextShadow};
+	--headingFontWeight: #{$_headingFontWeight};
+	--heading1TextShadow: #{$_heading1TextShadow};
+	--heading1Size: #{$_heading1Size};
+	--heading2Size: #{$_heading2Size};
+	--heading3Size: #{$_heading3Size};
+	--heading4Size: #{$_heading4Size};
+	--heading5Size: #{$_heading5Size};
+	--codeFont: #{$_codeFont};
+	--linkColor: #{$_linkColor};
+	--linkColorHover: #{$_linkColorHover};
+}
 
-// Vertical spacing between blocks of text
-$blockMargin: 10px;
+// 2. Map SCSS variables to CSS variables for our own rules,
+//    while keeping raw SCSS values available for Sass functions/template.
+$backgroundColor: $_backgroundColor;
+$mainFont: $_mainFont;
+$mainFontSize: $_mainFontSize;
+$mainColor: $_mainColor;
+$accentClr: $_accentClr;
+$codeClr: $_codeClr;
+$headingColor: $_headingColor;
+$success: $_success;
+$danger: $_danger;
+$warning: $_warning;
+$tip: $_tip;
+$note: $_note;
+$cite: $_cite;
+$overlayElementBgColor: $_overlayElementBgColor;
+$overlayElementFgColor: $_overlayElementFgColor;
+$selectionBackgroundColor: $_selectionBackgroundColor;
+$selectionColor: $_selectionColor;
+$blockMargin: $_blockMargin;
+$headingMargin: $_headingMargin;
+$headingFont: $_headingFont;
+$headingLineHeight: $_headingLineHeight;
+$headingLetterSpacing: $_headingLetterSpacing;
+$headingTextShadow: $_headingTextShadow;
+$headingFontWeight: $_headingFontWeight;
+$heading1TextShadow: $_heading1TextShadow;
+$heading1Size: $_heading1Size;
+$heading2Size: $_heading2Size;
+$heading3Size: $_heading3Size;
+$heading4Size: $_heading4Size;
+$heading5Size: $_heading5Size;
+$codeFont: $_codeFont;
+$linkColor: $_linkColor;
+$linkColorHover: $_linkColorHover;
 
-// Headings
-$headingMargin: 30px 0;
-$headingLineHeight: 1;
-$headingColor: $mainColor;
-$headingLetterSpacing: normal;
-$headingTextTransform: normal;
-$headingTextShadow: none;
-$headingFontWeight: bold;
-$heading1TextShadow: $headingTextShadow;
-
-$heading1Size: 3.77em;
-$heading2Size: 2.11em;
-$heading3Size: 1.55em;
-$heading4Size: 1em;
-
-// Links and actions
-$linkColor: lighten($accentClr, 20%);
-$linkColorHover: lighten($linkColor, 20%);
+// 3. Override ONLY the CSS variable in the class
+.reveal .studentSlide {
+	--accentClr: blue;
+	--accentClr-rgb: 0, 0, 255;
+	--codeClr: var(--accentClr);
+	--linkColor: #{lighten(blue, 20%)};
+	--linkColorHover: #{lighten(lighten(blue, 20%), 20%)};
+	--selectionBackgroundColor: #{blue}77;
+	--r-heading-font: 'Inconsolata';
+}
 
 // Generates the presentation background, can be overridden
 // to return a background image or gradient
 @mixin bodyBackground() {
-    background: $backgroundColor;
+	background: var(--backgroundColor);
 }
 
 @import "reveal-js/dist/theme/template/theme";
-@import "reveal-js/dist/theme/template/exposer";
 
 // Override **some** bootstrap default values
-ol,
-ul {
-    padding-left: 0rem !important;
+ol, ul {
+  padding-left: 0rem !important;
 }
 
 .reveal [class*="primary"] {
-    --bs-primary: #{$accentClr};
-    --bs-primary-bg: #{$accentClr};
-    --bs-primary-rgb:
-        #{red($accentClr)}, #{green($accentClr)}, #{blue($accentClr)};
+	--bs-primary: var(--accentClr);
+	--bs-primary-bg: var(--accentClr);
+	--bs-primary-rgb: var(--accentClr-rgb);
 
-    // Buttons variable
-    --bs-btn-bg: #{$accentClr};
-    --bs-btn-border-color: #{$accentClr};
-    --bs-btn-color: #{fff};
-    --bs-btn-bg: #{$accentClr};
-    --bs-btn-border-color: #{$accentClr};
-    --bs-btn-hover-color: #{$backgroundColor};
-    --bs-btn-hover-bg: #{$accentClr};
-    --bs-btn-hover-border-color: #{$accentClr};
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #{$backgroundColor};
-    --bs-btn-active-bg: #{$accentClr};
-    --bs-btn-active-border-color: #{$accentClr};
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #{$backgroundColor};
-    --bs-btn-disabled-bg: #{$accentClr};
-    --bs-btn-disabled-border-color: #{$accentClr};
-    color: $backgroundColor !important;
+	// Buttons variable
+	--bs-btn-bg: var(--accentClr);
+	--bs-btn-border-color: var(--accentClr);
+	--bs-btn-color: #fff;
+	--bs-btn-bg: var(--accentClr);
+	--bs-btn-border-color: var(--accentClr);
+	--bs-btn-hover-color: var(--backgroundColor);
+	--bs-btn-hover-bg: var(--accentClr);
+	--bs-btn-hover-border-color: var(--accentClr);
+	--bs-btn-focus-shadow-rgb: 49, 132, 253;
+	--bs-btn-active-color: var(--backgroundColor);
+	--bs-btn-active-bg: var(--accentClr);
+	--bs-btn-active-border-color: var(--accentClr);
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: var(--backgroundColor);
+	--bs-btn-disabled-bg: var(--accentClr);
+	--bs-btn-disabled-border-color: var(--accentClr);
+	color: var(--backgroundColor) !important;
 }
 
-.reveal .slide-background:not(.stack, [data-background-hash]) {
-    background-color: transparent;
-    // Uncomment to add bottom right logo in every slide
-    background-image: $logo;
-    background-repeat: no-repeat;
-    background-position: 1.5% 97%;
-    background-size: 15%;
-    background-clip: border-box;
+.reveal .slide-background:not(.stack) {
+	background-color: transparent;
+	// Uncomment to add bottom right logo in every slide
+	background-image: var(--logo);
+	background-repeat: no-repeat;
+	background-position: 1.5% 97%;
+	background-size: 15%;
+	background-clip: border-box;
 
-    // Uncomment to add slides border
-    // border-style: solid;
-    // border-color: $accentClr;
-    // border-width: 0.3em;
-}
-
-.reveal .navigate-left {
-    display: flex;
+	// Uncomment to add slides border
+	border-style: solid;
+	border-color: var(--accentClr);
+	border-width: 0.3em;
 }
 
 .reveal .navigate-left::before {
-    content: $author;
-    min-width: max-content;
-    display: block;
-    align-content: center;
-    padding-right: 10px;
-    color: $accentClr;
-    font-size: 2em;
-    font-family: $mainFont;
+	content: "N. Magi - Abilitazione all'insegnamento c.d.c. B016";
+	min-width: max-content;
+	position: absolute;
+	right: 45px;
+	top: 6px;
+	z-index: -1;
+	color: var(--accentClr);
+	font-size: 2em;
+	font-family: var(--mainFont);
 }
 
 .reveal strong,
 .reveal b {
-    font-weight: bold;
-    color: $accentClr;
+	font-weight: bold;
+	color: var(--accentClr);
 }
 
 .reveal em {
-    font-style: italic;
-    color: $accentClr;
+	font-style: italic;
+	color: var(--accentClr);
 }
 
 .reveal section img {
-    border: 0em;
-    box-shadow: none;
-    max-width: 100%;
-    max-height: 23em;
-    height: auto;
-    object-fit: contain;
+	border: 0em;
+	box-shadow: none;
+	max-width: 100%;
+	max-height: 23em;
+	height: auto;
+	object-fit: contain;
 }
 
 .reveal code:not(.nohighlight) {
-    color: $codeClr;
-    font-family: $codeFont;
-    font-weight: bold;
+	color: var(--codeClr);
+	font-family: "JetBrains Mono", "Oxygen Mono", "Roboto Mono", "Ubuntu Mono", "Courier New", Courier, monospace;
+	font-weight: bold;
 }
 
 .reveal .code-wrapper {
-    border-radius: 10px;
-    padding: 7px;
-    box-shadow: 2.5px 2.5px 10px rgba($mainColor, 0.3);
+	border-radius: 10px;
+	padding: 7px;
+	box-shadow: 2.5px 2.5px 10px var(--mainColor);
 }
 
-.reveal blockquote {
-    background-color: rgba($color: $accentClr, $alpha: 0.2);
-    border-radius: 20px;
-    border: 2px solid $accentClr;
-    box-shadow: 5px 5px 0px $accentClr;
-    transition: all 0.3s ease;
+blockquote {
+    background-color: color-mix(in srgb, var(--accentClr) 30%, white) !important;
+    border: 5px solid var(--accentClr);
+    border-radius: 15px;
+    box-shadow: 7px 7px 0px color-mix(in srgb, var(--accentClr) 95%, black) !important;
 }
 
-.reveal blockquote:hover {
-    // transition: all;
-    box-shadow: 10px 10px 0px $accentClr;
-    background-color: rgba($color: $accentClr, $alpha: 0.1);
+blockquote:hover {
+    box-shadow: 0px 0px 15px color-mix(in srgb, var(--accentClr) 99%, black) !important;
+    transition: all .25s ease-out;
 }
 
-/* Pointers */
-.reveal *  {
-    cursor: url("../pointer/normal.svg") 10 10, pointer !important;
+/* Base callout styling */
+.callout {
+	margin: 0 auto;
+	// padding: 15px;
+	max-width: fit-content;
+	position: relative;
+	border-left: 10px solid #007bff;
+	border-radius: 10px;
+	background: #f8f9fa;
+	box-shadow: 7px 7px 5px color-mix(in srgb, var(--mainColor) 10%, transparent);
+}
+
+.callout .callout-background {
+    border: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.callout p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	vertical-align: middle;
+}
+
+.callout-title {
+	font-weight: bold;
+	color: #333;
+	font-size: 1.1em;
+	justify-content: start;
+}
+
+.callout-title::before {
+	content: "";
+	margin-inline: .3em;
+	background-size: contain;
+}
+
+/* Note styling */
+.callout.note {
+	border-left-color: var(--note);
+	background: #e1f5fe;
+}
+
+.callout.note .callout-title {
+	color: #0277bd;
+}
+
+/* Tip styling */
+.callout.tip {
+	border-left-color: var(--tip);
+	background: color-mix(in srgb, var(--tip) 50%, white);
+}
+
+.callout.tip .callout-title {
+	color: var(--tip);
+}
+
+.callout.tip::before {
+	content: '';
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    display: inline-block;
+    transform: rotate(-30deg);
+	left: -110px;
+	top: -80px;
+    mask: url("../accent.svg") 100% 100% no-repeat;
+    mask-size: cover;
+    background: var(--tip);
+}
+
+/* Warning styling */
+.callout.warning {
+	border-left-color: var(--warning);
+	background: color-mix(in srgb, var(--warning) 55%, white);
+}
+
+.callout.warning .callout-title {
+	color: #f57c00;
+}
+
+/* Danger styling */
+.callout.danger {
+	border-left-color: var(--danger);
+	background: color-mix(in srgb, var(--danger) 60%, white);
+}
+
+.callout.danger .callout-title {
+	color: color-mix(in srgb, var(--danger) 88%, black);
+}
+
+/* Success styling */
+.callout.success {
+	border-left-color: var(--success);
+	background: color-mix(in srgb, var(--success) 45%, white);
+}
+
+.callout.success .callout-title {
+	color: color-mix(in srgb, var(--success) 88%, black);
+}
+
+/* Citation styling */
+.callout.cite {
+	border-left-color: transparent;
+	background: color-mix(in srgb, var(--cite) 55%, white);
+}
+
+.callout.cite .callout-title {
+	color: color-mix(in srgb, var(--cite) 88%, black);
+	padding-left: .4em;
+}
+
+.callout.cite::before, .callout.cite::after {
+    position: absolute;
+	font-size: 6.5em;
+    display: inline-block;
+	color: var(--cite);
+	text-shadow: 5px 5px 0 color-mix(in srgb, var(--cite) 80%, white);
+}
+
+.callout.cite::before {
+	content: '\201C';
+	left: -60px;
+	top: -100px;
+}
+
+.callout.cite::after {
+	content: '\201D';
+	right: -50px;
+	bottom: -220px;
+}
+
+/* Interactive hover effects */
+.callout {
+	transition: all 0.3s ease;
+	cursor: default;
+}
+
+.callout:hover {
+	box-shadow: 0 4px 12px color-mix(in srgb, var(--mainColor) 15%, transparent);
+	transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.callout {
+		margin: 15px -10px;
+		padding: 12px;
+		border-radius: 0;
+	}
+}
+
+.callout.success .callout-title::before {
+	content: "✅";
+}
+
+.callout.note .callout-title::before {
+	content: "ℹ️";
+}
+
+.callout.tip .callout-title::before {
+	content: "💡";
+}
+
+.callout.warning .callout-title::before {
+	content: "⚠️";
+}
+
+.callout.danger .callout-title::before {
+	content: "🚨";
+}
+
+.callout.cite .callout-title::before {
+	content: "";
 }

@@ -10,614 +10,304 @@ aliases = [
 
 +++
 
-{{% accentify "top-left" %}}
-Today's date! `{{% today %}}`
-{{% /accentify %}}
+Traccia **#01**
 
-# Short guide to Markdown slides
-### This has much potential
+# **Rilevazione** e **gestione** degli **errori** nel codice: <br>le **eccezioni**
+#### P.F. 60 CFU · Abilitazione all'insegnamento - esame orale
+c.d.c. B016 - Laboratorio di Scienze e Tecnologie Informatiche
 
-{{% pdf %}} <small> — <strong>Author</strong>: Paperon De Paperoni</small>
-
----
-{{% section %}}
-
-# Typography
-
-{{% accentify %}}
-Slide down!
-{{% /accentify %}}
-
-$\downarrow$
-
----
-
-{{% multicol %}}
-{{% col%}}
-# Headers
-{{% /col%}}
-{{% col%}}
-
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-{{% /col%}}
-{{% /multicol %}}
-
----
+<br>
 
 {{% multicol %}}
 {{% col %}}
-# Text
-{{% /col %}}
-
-{{% col %}}
-normal text
-
-`inline code`
-
-*italic*
-
-**bold**
-
-**_emphasized_**
-
-*__emphasized alternative__*
-
-~~strikethrough~~
-
-[link to google](http://www.google.com)
-{{% /col %}}
-
-{{% /multicol %}}
-
----
-
-{{% multicol %}}
-{{% col %}}
-# Lists
+<small><strong>Candidato</strong>: Nicholas Magi</small>
 {{% /col %}}
 {{% col %}}
-
-1. First ordered list item
-1. Another item
-    * Unordered sub-list.
-    * with two items
-        * another sublist
-            1. With a sub-enum
-            1. yay!
-1. Actual numbers don't matter, just that it's a number
-  1. Ordered sub-list
-1. And another item.
-
+<small><strong>Matricola</strong>: `0001253846` </small>
 {{% /col %}}
 {{% /multicol %}}
 
-{{% /section %}}
+{{% pdf %}} 
 
 ---
 
-{{% section %}}
+## Contesto classe
 
-{{% accentify "top-right" %}}
-# UI Blocks
-{{% /accentify %}}
+- Classe: **terza**
+- Scuola: **Istituto Tecnico**
+  - Settore: **Tecnologico**
+    - Indirizzo: **Informatica e Telecomunicazioni**
+      - Articolazione: **Informatica**
+- Disciplina: **Informatica**
+- Alunni: **25**
+  - di cui *due* **Bisogni Educativi Speciali (BES) con ADHD**
 
-Slide down!
+<br>
+<br>
 
-$\downarrow$
+> Classe coesa e collaborativa, si riesce a lavorare in un clima disteso ma si rileva una bassa soglia dell'attenzione e frequente necessità di uscire dall'aula.
 
 ---
 
-{{% multicol %}}
-{{% col %}}
-# Callouts
+## Contestualizzazione nei <br> documenti ministeriali
 
-{{% callout title="A wise man once said" type="cite" 
-src="Confucio, ''lettere d'amore''" %}}
-skrr skrr blea blea
-{{% /callout %}}
+<small>
 
-{{% callout title="A wise man once said" type="cite" 
-src="Confucio, ''lettere d'amore'' (con link)" srcLink="https://www.google.com" %}}
-skrr skrr blea blea
-{{% /callout %}}
+Dal documento: 
 
+**'ISTITUTI TECNICI - LINEE GUIDA PER IL PASSAGGIO AL NUOVO ORDINAMENTO - Secondo biennio e quinto anno - indirizzo "Informatica e Telecomunicazioni"'** 
+<br>
+allegato alla DIRETTIVA n. 4 del 16/01/2012, applicazione dell'articolo 8, comma 3, del d.P.R. 15 marzo 2010, n. 88. [1]
+
+</small>
+
+<br class="my-5">
+
+{{% multicol class="gap-4" %}}
+{{% col class="px-5 pb-5 border rounded-3" %}}
+#### **Conoscenze**
+- Linguaggi e macchine a vari livelli di astrazione.
 {{% /col %}}
-
-{{% col%}}
-{{% callout title="Tip" type="tip" %}}
-this must be a great tip
-{{% /callout %}}
-
-{{% callout title="Note" type="note" %}}
-this is an information, or a note
-{{% /callout %}}
-
-{{% callout title="Success" type="success" %}}
-Yay!
-{{% /callout %}}
-
-{{% callout title="Danger!" type="danger" %}}
-something went possibly wrong :/
-{{% /callout %}}
-
-{{% callout title="Warning!" type="warning" %}}
-just a warning
-{{% /callout %}}
-
+{{% col class="px-5 pb-5 border rounded-3" %}}
+#### **Abilità**
+- Scegliere il tipo di organizzazione dei dati più adatto a gestire le
+informazioni in una situazione data.
 {{% /col %}}
 {{% /multicol %}}
 
 ---
 
-# Code Blocks
-pt#01
-
-## inline
-
-You can play around with this `code` or `pwd`
-
----
-
-{{% multicol %}}
-
-# Code Blocks
-pt#02
-
-## inside code blocks
-{{% col %}}
-
-```java { linenos=inline hl_lines=["4-6"] }
-import System;
-
-class Program {
-  public static void main(string[] args) {
-    System.out.println("Hello, World!");
-  }
-}
+```mermaid
+timeline
+    title COLLOCAZIONE DELLA LEZIONE / 1 - Programmazione di massima del terzo anno
+    section MODULO 1 - Programmazione procedurale in Python (3/4 dell'anno - primo quadrimestre, pausa didattica, prima parte del secondo quadrimestre)
+        UD1.0X ...
+        UD1.06 Le funzioni
+            : Introduzione
+            : Scope delle variabili
+            : Funzioni e procedure, tipi di return
+            : ...
+        UD1.07 Robustezza del software
+            : Tipologie di errore (runtime, compilazione, logica), utilizzo di codici di errore e loro limitazioni
+            : Rilevazione e gestione - il sistema delle eccezioni
+            : Propagazione dell'errore e stacktrace
+            : Attività su un caso reale
+            : ...
+    section MODULO 2 - Introduzione alla programmazione Web (1/4 dell'anno - seconda parte secondo quadrimestre, fino a fine anno)
+        UD2.01 Introduzione HTML/CSS
+            : ...
+        UD2.0Y ...
 ```
-{{% /col %}}
 
-{{% col %}}
-{{% callout type="note" %}}
-You can even highlight some lines of code!
+---
+
+```mermaid
+timeline
+    title COLLOCAZIONE DELLA LEZIONE / 1 - Programmazione di massima del terzo anno
+    section MODULO 1 - Programmazione procedurale in Python (3/4 dell'anno - primo quadrimestre, pausa didattica, prima parte del secondo quadrimestre)
+        UD1.01 Introduzione a Python
+            : Algoritmo, programma e processo  
+            : Livelli di astrazione 
+            : Interpreti e compilatori 
+            : Flusso di un programma
+            : Configurazione IDE Thonny
+            : ...
+        UD1.02 Variabili, operazioni I/O 
+            : Concetto di variabile, tipi di dato 
+            : Sintassi dichiarazioni e assegnazione variabile, utilizzo nel codice 
+            : Operatori base
+            : Esempi di I/O, conversione dei dati
+            : ...
+        UD1.03 Controllo del flusso
+            : Necessità di biforcazione del flusso, il costrutto selezione "if"
+            : Varianti "if...else", "if...elif...else"
+            : Necessità di ripetizione, iterazione determinata - casi d'uso del "for"
+            : Iterazione indeterminata, casi d'uso del "while"
+            : ...
+        UD1.04 Liste monodimensionali
+            : Necessità, esempi da Notional Machine
+            : Iterazione e modifica di una lista
+            : ...
+        UD1.05 Algoritmi base
+            : Algoritmi notevoli sulle liste (ricerca del min/max/media/target su liste numeriche, ordinamento di una lista...)
+            : Cenni di complessità computazionale
+            : ...
+        UD1.06 Le funzioni
+            : Introduzione
+            : Scope delle variabili
+            : Funzioni e procedure, tipi di return
+            : ...
+        UD1.07 Robustezza del software
+            : Tipologie di errore (runtime, compilazione, logica), utilizzo di codici di errore e loro limitazioni
+            : Rilevazione e gestione - il sistema delle eccezioni
+            : Propagazione dell'errore e stacktrace
+            : Attività su un caso reale
+            : ...
+    section MODULO 2 - Introduzione alla programmazione Web (1/4 dell'anno - seconda parte secondo quadrimestre, fino a fine anno)
+        UD2.01 Introduzione HTML/CSS
+            : ...
+        UD2.02 Cenni di JavaScript
+            : ...
+```
+
+---
+
+## Collocazione della lezione / 2
+
+{{% callout type="note" title="Big Ideas of Computer Science [2]" src="Tim Bell, University of Canterbury, NZ; Paul Tymann, Rochester Institute of Technology, New York, USA; Amiram Yehudai, Tel Aviv University, Israel" %}}
+
+**#6 - Digital systems are designed by humans to serve human needs.**
+
+<small>*+ possibile correlazione con*</small>
+
+**#5 - Programs express algorithms and data in a form that can be implemented on a
+computer.**
+
 {{% /callout %}}
-{{% /col %}}
-
-{{% /multicol %}}
-
 
 ---
 
-{{% code path="static/files/code.cpp"  %}}
-## from file
+## Prerequisiti
 
-{{% /section %}}
-
----
-
-
-![Alternative text](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.mos.cms.futurecdn.net%2FCcD2hbxVtfyvg5Q923eebM.jpg&f=1&nofb=1&ipt=8478f0cb985c8f3a744229931c01e03eca07c37df471f14807cfd2f817c67faa)
-
-#### Inline images
+- Sintassi del linguaggio di programmazione **Python**
+- Concetto di algoritmo
+  - saper implementare alcuni *algoritmi notevoli* (ricerca di min/max/elemento all'interno di una lista, determinare se un numero $n$ è primo...)
+- Principali costrutti della programmazione strutturata:
+  - costrutto selezione: `if`, `elif`, `else`;
+  - costrutto iterazione: `for`, `while`;
+- Concetto di **funzione**
 
 ---
 
-## Fallback to shortcodes for resizing
+## Obiettivi specifici di apprendimento in forma operativa
 
-Autoresize specifying
+*Al termine dell'attività, lo studente è in grado di:*
 
-* `max-w` (percent of parent element width) and/or `max-h` (percent of viewport height) as max sizes , and
-* `width` and/or `height` as *exact* sizes (as percent of viewport size)
+<div class="d-flex flex-column gap-1">
 
----
+<span class="border border-3 rounded-3 px-5 bg-warning-subtle">
 
-{{% section %}}
-{{< slide background-iframe="animations/8bitmoon.html" background-interactive=false >}}
+#01) **Identificare**, dato un breve programma Python con costrutti dedicati alla rilevazione (`raise`) e quelli dedicati alla gestione (`try/except`) degli errori, tali costrutti e associare ciascun costrutto al rispettivo ruolo (funzione chiamata vs programma chiamante) in tutti i casi proposti.
 
-## **With background!**
+</span>
 
-Explore the `static/animations` folder to find out more!
+<span class="border border-3 rounded-3 px-5 bg-danger-subtle">
 
----
+#02) **Prevedere** l'output e il flusso di esecuzione di un breve programma Python che utilizza `raise` e `try/except` a fronte di input validi e non validi, indicando correttamente se l'eccezione viene intercettata o se provoca la terminazione del programma in almeno 3 casi di test su 4.
 
-{{< slide background-iframe="animations/hexagons.html" background-interactive=false >}}
+</span>
 
-## **Hexagons everywhere**
+<span class="border border-3 rounded-3 px-5 bg-warning-subtle">
 
----
+#03) **Usare** i costrutti `raise ValueError` e `try/except`, dato un breve programma Python guidato (con checklist operativa), per sostituirli ai controlli realizzati con `print` e valori sentinella in modo che il codice separi rilevazione e gestione e superi tutti i casi di test dati senza terminazioni anomale.
 
-{{< slide background-iframe="animations/melting-lines.html" background-interactive=false >}}
+</span>
 
-## **Melting lines**
-
----
-
-{{< slide background-iframe="animations/ribbons.html" background-interactive=false >}}
-
-## **Ribbons**
-
----
-
-{{< slide background-iframe="animations/particles.html" background-interactive=false >}}
-
-## **Particles**
-
----
-
-{{< slide background-iframe="animations/grainient.html" background-interactive=false >}}
-
-## Grainient
-
-{{% /section %}}
-
----
-
-## Tick and Cross
-
-* {{% tick %}} This is something good
-* {{% cross %}} This is something bad
-
----
-
-## Chart.js
-
-{{< chart >}}
-{
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: 'Bar Chart',
-            data: [12, 19, 18, 16, 13, 14],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        maintainAspectRatio: false,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-}
-{{< /chart >}}
-
----
-
-## FontAwesome
-
-<i class="fa-solid fa-mug-hot"></i>
-<i class="fa-solid fa-lemon"></i>
-<i class="fa-solid fa-flask"></i>
-<i class="fa-solid fa-apple-whole"></i>
-<i class="fa-solid fa-bacon"></i>
-<i class="fa-solid fa-beer-mug-empty"></i>
-<i class="fa-solid fa-pepper-hot"></i>
-
----
-
-## Bootstrap 1
-
-<div class="card w-100" >
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/View_of_Cesena_from_the_Abbey.jpg/1920px-View_of_Cesena_from_the_Abbey.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
 </div>
 
----
-
-## Bootstrap 2
-
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-
-<button type="button" class="btn btn-link">Link</button>
 
 ---
 
-## Low res, plain markdown
+## Micro-planning dell'attività
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Scavolino_innevata.jpg/260px-Scavolino_innevata.jpg)
+La lezione si svolge in compresenza con il collega di classe A041.
 
----
-
-## Hi res, plain markdown
-
-![](https://upload.wikimedia.org/wikipedia/commons/6/6c/Scavolino_innevata.jpg)
-
----
-
-{{< slide background-image="https://upload.wikimedia.org/wikipedia/commons/6/6c/Scavolino_innevata.jpg" >}}
-
-# Large images as background
-## (May affect printing)
+| Fase 	| Docente 	| Studenti 	| Tempi 	|
+|------	|---------	|----------	|-------	|
+| 1.     	|         	|          	|       	|
+| 2.     	|         	|          	|       	|
+| 3.     	|         	|          	|       	|
+| 4.     	|         	|          	|       	|
 
 ---
 
+## Metodologie <br> didattiche
 
-{{< slide background-video="https://github.com/DanySK/slides-2024-acsos-imageonomics/raw/master/content/nonnadir.mkv" background-video-loop="true" background-video-muted="true" background-opacity="0.95">}}
-
-# Video background
-
----
+<br>
 
 {{% multicol %}}
 {{% col %}}
-{{% accentify "top-right" %}}
-# $$\LaTeX{}$$
-{{% /accentify %}}
+#### 1. Pair <br> Programming
 {{% /col %}}
-
 {{% col %}}
-
-$\textbf{Exercise}$ 
-
-Prove that $a_n = \frac{2n + 1}{n + 2} \xrightarrow[n \to +\infty]{} 2$.
-
-$\textbf{Proof}$ 
-
-Given $\varepsilon > 0,\ \exists m_\varepsilon \in \mathbb{N}:$
-<div>
-\begin{equation}
-    \begin{split}
-        \left\lvert a_n - l \right\rvert &= \left\lvert \frac{2n + 1}{n + 2} - 2 \right\rvert \leq \varepsilon, \qquad \forall n \in \mathbb{N} \\
-        &= \left\lvert \frac{2n + 1 -2n - 4}{n + 2} \right\rvert \leq \varepsilon \\ 
-        &\Longleftrightarrow \frac{3}{n + 2} \leq \varepsilon \\
-        &\Longleftrightarrow n + 2 \geq \frac{3}{\varepsilon} \\
-        &\Longleftrightarrow n \geq \frac{3}{\varepsilon} - 2
-    \end{split}
-\end{equation}
-</div>
-
-I can choose $m_\varepsilon = \left[\frac{3}{\varepsilon} - 2\right] + 1$ in order to satisfy the limit. $\\#$
+#### 2. Necessity Learning Design
+{{% /col %}}
+{{% col %}}
+#### 3. Unplugged
 {{% /col %}}
 {{% /multicol %}}
 
-
 ---
 
-# Code snippets
+## Valutazione formativa
 
-```kotlin { linenos=inline }
-val x = pippo
-```
-
-```go { linenos=inline, hl_lines=["5-7"]  }
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello world!")
-}
-```
-
-You can highlight some lines of code!
-
----
-
-# Tables
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
----
-
-# Quotes
-
-> Multiple
-> lines
-> of
-> a
-> single
-> quote
-> get
-> joined
-
-> Very long one liners of Markdown text automatically get broken into a multiline quotation, which is then rendered in the slides.
-
----
-
-# Fragments
-
-* {{< frag c="pluto" >}}
-* {{< frag c="pluto" >}}
-* {{< frag c="pluto" >}}
-
----
-
-# Stacking images with Fragments
 {{% multicol %}}
 {{% col %}}
-<p class="fragment" data-fragment-index="0">Pippo</p>
-<p class="fragment" data-fragment-index="1">Pluto</p>
-<p class="fragment" data-fragment-index="2">Paperino</p>
-{{%/ col %}}
+#### Docenti
 
+{{% /col %}}
 {{% col %}}
-<div class="r-stack">
-  <img
-    class="fragment current-visible"
-    data-fragment-index="0"
-    src="https://www.topolino.it/wp-content/uploads/2019/12/pippointera.png"
-    width="450"
-    height="300"
-  />
-  <img
-    class="fragment current-visible"
-    data-fragment-index="1"
-    src="https://www.topolino.it/wp-content/uploads/2019/12/plutointera.png"
-    width="300"
-    height="450"
-  />
-  <img
-    class="fragment current-visible"
-    data-fragment-index="2"
-    src="https://it.wikifur.com/w/images/thumb/6/6f/Donald_Duck.png/362px-Donald_Duck.png"
-    width="400"
-    height="400"
-  />
-</div>
-{{%/ col %}}
+#### Studenti
 
-{{%/ multicol %}}
-
+{{% /col %}}
+{{% /multicol %}}
 
 ---
 
-# Graphs via Gravizo
-
-{{< gravizo "Example Gravizo graph" >}}
-  digraph G {
-    aize ="4,4";
-    main [shape=box];
-    main -> parse [weight=8];
-    parse -> execute;
-    main -> init [style=dotted];
-    main -> cleanup;
-    execute -> { make_string; printf}
-    init -> make_string;
-    edge [color=red];
-    main -> printf [style=bold,label="100 times"];
-    make_string [label="make a string"];
-    node [shape=box,style=filled,color=".7 .3 1.0"];
-    execute -> compare;
-  }
-{{< /gravizo >}}
+## Piano B: riadattamento dell'attività
+Nel caso la valutazione formativa rilevasse **diffuse situazioni di fragilità**.
 
 ---
 
-# Graphs via mermaid.js
+## Inclusione "by design"
 
-```mermaid
-classDiagram
-  Class01 <|-- AveryLongClass : Coosssl
-  Class03 *-- Class04
-  Class05 o-- Class06
-  Class07 .. Class08
-  Class09 --> C2 : Where am i?
-  Class09 --* C3
-  Class09 --|> Class07
-  Class07 : equals()
-  Class07 : Object[] elementData
-  Class01 : size()
-  Class01 : int chimp
-  Class01 : int gorillasaaaaaaaaaaaaaaaaaaaaaa
-  Class08 <--> C2: Cool label
-```
+{{% multicol %}}
+{{% col %}}
+#### Strategie
+
+{{% /col %}}
+{{% col %}}
+#### Strumenti
+
+{{% /col %}}
+{{% /multicol %}}
 
 ---
 
-
-# Graphs via mermaid.js with options
-
-```mermaid
-%%{init: {'theme':'default', 'themeVariables': { 'fontSize': '.34em', 'fontFamily': 'verdana' }}}%%
-classDiagram
-  Class01 <|-- AveryLongClass : Coosssl
-  Class03 *-- Class04
-  Class05 o-- Class06
-  Class07 .. Class08
-  Class09 --> C2 : Where am i?
-  Class09 --* C3
-  Class09 --|> Class07
-  Class07 : equals()
-  Class07 : Object[] elementData
-  Class01 : size()
-  Class01 : int chimp
-  Class01 : int gorillasaaaaaaaaaaaaaaaaaaaaaa
-  Class08 <--> C2: Cool label
-```
-
-
----
-# Graphs via mermaid.js 2
-
-```mermaid
-graph TD
-  SL([fa:fa-user second level]) --> L[solution]
-  L -- solution email --> db[(mysql)]
-  db --> X[automatic]
-  X --> CM([fa:fa-users first level])
-  db -- Email --> c([customer support]);
-```
+## Risorse didattiche, attrezzature, spazi
 
 ---
 
-# Graphs via mermaid.js 3
-
-```mermaid
-gitGraph
-  commit id: "Initialize project"
-  commit id: "Make some changes"
-  branch develop
-  checkout develop
-  commit
-  commit
-  checkout main
-  merge develop
-  commit
-  commit
-```
+## Bibliografia
 
 ---
 
-# Keystrokes
+## Micro-planning dell'attività
 
-<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>
+La lezione si svolge in compresenza con il collega di classe A041.
+
+| Fase 	| Docente 	| Studenti 	| Tempi 	|
+|------	|---------	|----------	|-------	|
+| 1.     	|         	|          	|       	|
+| 2.     	|         	|          	|       	|
+| 3.     	|         	|          	|       	|
+| 4.     	|         	|          	|       	|
 
 ---
 
-# QR code
+{{< slide template="student" >}}
 
-{{% qrcode data="https://www.google.com" %}}
+Istituto Tecnico Tecnologico "..." @ Cesena (FC)
+# Gestione e rilevazione dell'errore in Python
+
+{{% pdf %}}
+<br>
+<small>
+
+A cura di Nicholas Magi - `nicholas.magi[at]...[dot]com`
+
+</small>
 
 ---
 
-# Import shared slides
-
-<!-- write-here "shared-slides/devops/devops-intro.md" -->
-<!-- end-write -->
+{{< slide template="student" >}}

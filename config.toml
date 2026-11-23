@@ -58,7 +58,7 @@ height = '1080'
 targetPath = "css/custom-theme.css"
 enableSourceMap = true
 
-[[params.reveal_hugo.mermaid]]
+[params.reveal_hugo.mermaid]
 startOnLoad = true
 theme = "default"
 fontFamily = "Inconsolata"
@@ -69,4 +69,5 @@ useMaxWidth = true
 # mainBranchName = 'master'
 # rotateCommitLabel = true
 
-
+[params.reveal_hugo.templates.student]
+class = "studentSlide"
