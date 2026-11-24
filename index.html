@@ -94,7 +94,9 @@ informazioni in una situazione data.</li>
 </div>
 </div>
 </section><section>
-<div class="mermaid">timeline
+<!--
+```mermaid
+timeline
     title COLLOCAZIONE DELLA LEZIONE / 1 - Programmazione di massima del terzo anno
     section MODULO 1 - Programmazione procedurale in Python (3/4 dell'anno - primo quadrimestre, pausa didattica, prima parte del secondo quadrimestre)
         UD1.0X ...
@@ -113,9 +115,10 @@ informazioni in una situazione data.</li>
         UD2.01 Introduzione HTML/CSS
             : ...
         UD2.0Y ...
-</div>
+```
 
-</section><section>
+---
+--->
 <div class="mermaid">timeline
     title COLLOCAZIONE DELLA LEZIONE / 1 - Programmazione di massima del terzo anno
     section MODULO 1 - Programmazione procedurale in Python (3/4 dell'anno - primo quadrimestre, pausa didattica, prima parte del secondo quadrimestre)
@@ -172,104 +175,104 @@ informazioni in una situazione data.</li>
 <p><small><em>+ possibile correlazione con</em></small></p>
 <p><strong>#5 - Programs express algorithms and data in a form that can be implemented on a
 computer.</strong></p>
-</div><div class="callout-footer d-flex justify-content-end my-3 fs-1"><small>Tim Bell, University of Canterbury, NZ; Paul Tymann, Rochester Institute of Technology, New York, USA; Amiram Yehudai, Tel Aviv University, Israel</small></div></div>
+</div></div>
 </div>
 </section><section>
 <h2 id="prerequisiti">Prerequisiti</h2>
 <ul>
 <li>Sintassi del linguaggio di programmazione <strong>Python</strong></li>
-<li>Concetto di algoritmo
-<ul>
-<li>saper implementare alcuni <em>algoritmi notevoli</em> (ricerca di min/max/elemento all&rsquo;interno di una lista, determinare se un numero $n$ è primo&hellip;)</li>
-</ul>
-</li>
+<li>Concetto di algoritmo</li>
 <li>Principali costrutti della programmazione strutturata:
 <ul>
 <li>costrutto selezione: <code>if</code>, <code>elif</code>, <code>else</code>;</li>
 <li>costrutto iterazione: <code>for</code>, <code>while</code>;</li>
 </ul>
 </li>
-<li>Concetto di <strong>funzione</strong></li>
+<li>Concetto di <strong>funzione</strong>
+<ul>
+<li>tipo di ritorno, passaggio dei parametri</li>
+</ul>
+</li>
 </ul>
 </section><section>
 <h2 id="obiettivi-specifici-di-apprendimento-in-forma-operativa">Obiettivi specifici di apprendimento in forma operativa</h2>
 <p><em>Al termine dell&rsquo;attività, lo studente è in grado di:</em></p>
 <div class="d-flex flex-column gap-1">
-<span class="border border-3 rounded-3 px-5 bg-warning-subtle">
-<p>#01) <strong>Identificare</strong>, dato un breve programma Python con costrutti dedicati alla rilevazione (<code>raise</code>) e quelli dedicati alla gestione (<code>try/except</code>) degli errori, tali costrutti e associare ciascun costrutto al rispettivo ruolo (funzione chiamata vs programma chiamante) in tutti i casi proposti.</p>
+<span class="border border-3 rounded-3 py-3 px-5 bg-warning-subtle">
+<ol>
+<li><strong>Identificare</strong>, in un breve programma Python dato, i costrutti di rilevazione (<code>raise</code>) e gestione (<code>try/except</code>), associandoli al rispettivo ruolo (funzione vs chiamante) in tutti i casi proposti.</li>
+</ol>
 </span>
-<span class="border border-3 rounded-3 px-5 bg-danger-subtle">
-<p>#02) <strong>Prevedere</strong> l&rsquo;output e il flusso di esecuzione di un breve programma Python che utilizza <code>raise</code> e <code>try/except</code> a fronte di input validi e non validi, indicando correttamente se l&rsquo;eccezione viene intercettata o se provoca la terminazione del programma in almeno 3 casi di test su 4.</p>
-</span>
-<span class="border border-3 rounded-3 px-5 bg-warning-subtle">
-<p>#03) <strong>Usare</strong> i costrutti <code>raise ValueError</code> e <code>try/except</code>, dato un breve programma Python guidato (con checklist operativa), per sostituirli ai controlli realizzati con <code>print</code> e valori sentinella in modo che il codice separi rilevazione e gestione e superi tutti i casi di test dati senza terminazioni anomale.</p>
+<span class="border border-3 rounded-3 py-3 px-5 bg-warning-subtle">
+<ol start="2">
+<li><strong>Confrontare</strong> un programma Python che gestisce gli errori tramite valori sentinella con uno che utilizza le eccezioni, indicando almeno due vantaggi della separazione tra rilevazione e gestione rispetto a interfacce diverse.</li>
+</ol>
 </span>
 </div>
-</section><section>
-<h2 id="micro-planning-dellattività">Micro-planning dell&rsquo;attività</h2>
-<p>La lezione si svolge in compresenza con il collega di classe A041.</p>
-<table>
-  <thead>
-      <tr>
-          <th>Fase</th>
-          <th>Docente</th>
-          <th>Studenti</th>
-          <th>Tempi</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>2.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>3.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>4.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
 </section><section>
 <h2 id="metodologie--didattiche">Metodologie <br> didattiche</h2>
 <br>
 
 <div class="container-fluid m-0 p-0">
-    <div class='row '><div class='col '><h4 id="1-pair--programming">1. Pair <br> Programming</h4>
+    <div class='row gap-3'><div class='col border border-3 rounded-3 pb-5 px-4'><h5 id="perchè">PERCHÈ?</h5>
+<h4 id="1-pair">1. <strong>Pair <br> Programming</strong></h4>
+<ul>
+<li>Riduce il carico cognitivo della sintassi del codice</li>
+<li>Studenti ADHD ricevono supporto dai compagni</li>
+</ul>
 </div>
-<div class='col '><h4 id="2-necessity-learning-design">2. Necessity Learning Design</h4>
+<div class='col border border-3 rounded-3 pb-5 px-4'><h5 id="perchè">PERCHÈ?</h5>
+<h4 id="2-necessity-learning-design">2. <strong>Necessity Learning Design</strong></h4>
+<ul>
+<li>Lo studente capisce il problema reale che il meccanismo delle eccezioni risolve, senza considerarlo come nozione imposta dal docente.</li>
+</ul>
 </div>
-<div class='col '><h4 id="3-unplugged">3. Unplugged</h4>
+<div class='col border border-3 rounded-3 pb-5 px-4'><h5 id="perchè">PERCHÈ?</h5>
+<h4 id="3-didattica-unplugged-e-teatralizzazione">3. <strong>Didattica Unplugged e teatralizzazione</strong></h4>
+<ul>
+<li>Attivazione motoria richiesta per gli studenti con ADHD</li>
+<li>Lezione più dinamica e coinvolgente, soglia dell&rsquo;attenzione più alta</li>
+<li>Feedback immediato su quello che si sta facendo</li>
+</ul>
 </div>
 </div>
 </div>
 </section><section>
+<h2 id="micro-planning-dellattività">Micro-planning dell&rsquo;attività</h2>
+<p>La lezione si svolge in compresenza con il collega di classe A041.</p>
+<p><img src="imgs/planning.png" alt=""></p>
+</section><section>
 <h2 id="valutazione-formativa">Valutazione formativa</h2>
+<p>Somministrata tramite <strong>piattaforma digitale dedicata</strong> (<em>Moodle/custom</em>)</p>
 
 <div class="container-fluid m-0 p-0">
-    <div class='row '><div class='col '><h4 id="docenti">Docenti</h4>
+    <div class='row '><div class='col '><h4 id="studenti">Studenti</h4>
+<ul>
+<li>Evidenzia <strong>fragilità</strong> e <strong>punti di forza</strong> della comprensione dell&rsquo;argomento, fornendo anche una spiegazione - se necessario - sugli errori commessi.</li>
+<li>Il sistema fornisce un <strong>resoconto scaricabile</strong> sull&rsquo;andamento del test, fornendone una <strong>breve descrizione testuale</strong></li>
+</ul>
 </div>
-<div class='col '><h4 id="studenti">Studenti</h4>
+<div class='col '><h4 id="docenti">Docenti</h4>
+<ul>
+<li><strong>Feedback istantaneo sull&rsquo;andamento della classe</strong>;</li>
+<li>Capiscono se occorre riprendere e quanto profondamente i concetti della lezione nella volta successiva;</li>
+</ul>
 </div>
 </div>
 </div>
 </section><section>
 <h2 id="piano-b-riadattamento-dellattività">Piano B: riadattamento dell&rsquo;attività</h2>
 <p>Nel caso la valutazione formativa rilevasse <strong>diffuse situazioni di fragilità</strong>.</p>
+
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h3 id="parte-di-classe--con-fragilità">Parte di classe <br> <strong>con fragilità</strong></h3>
+<p>Per abbassare il carico cognitivo e concentrare tutto sull&rsquo;utilizzo di eccezioni e sul loro flusso, rendo il codice prodotto un <strong>Parson problem</strong> - da ricomporre e testare su Python Tutor.</p>
+</div>
+<div class='col '><h3 id="parte-di-classe-con-poche-o-nessuna-fragilità">Parte di classe <strong>con poche (o nessuna) fragilità</strong></h3>
+<p>Lavorano, guidati dal collega A041, all&rsquo;estensione di <code>app()</code>, aggiungendo qualche funzionalità extra.</p>
+</div>
+</div>
+</div>
 </section><section>
 <h2 id="inclusione-by-design">Inclusione &ldquo;by design&rdquo;</h2>
 
@@ -282,47 +285,20 @@ computer.</strong></p>
 </div>
 </section><section>
 <h2 id="risorse-didattiche-attrezzature-spazi">Risorse didattiche, attrezzature, spazi</h2>
+<ul>
+<li>Laboratorio
+<ul>
+<li>almeno una postazione per coppia (meglio se ognuno dotato di suo dispositivo)</li>
+</ul>
+</li>
+<li>Lavagna (anche non LIM)</li>
+<li>Proiettore</li>
+<li>Fogli di carta e penne</li>
+<li>Slides del docente</li>
+<li>pythontutor.com</li>
+</ul>
 </section><section>
 <h2 id="bibliografia">Bibliografia</h2>
-</section><section>
-<h2 id="micro-planning-dellattività-1">Micro-planning dell&rsquo;attività</h2>
-<p>La lezione si svolge in compresenza con il collega di classe A041.</p>
-<table>
-  <thead>
-      <tr>
-          <th>Fase</th>
-          <th>Docente</th>
-          <th>Studenti</th>
-          <th>Tempi</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>2.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>3.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>4.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
 </section>
 
 <section data-noprocess data-shortcode-slide
@@ -330,7 +306,7 @@ computer.</strong></p>
     data-template="student">
   
 <p>Istituto Tecnico Tecnologico &ldquo;&hellip;&rdquo; @ Cesena (FC)</p>
-<h1 id="gestione-e-rilevazione-dellerrore-in-python">Gestione e rilevazione dell&rsquo;errore in Python</h1>
+<h1 id="gestione-e-rilevazione-degli-errori-in-python">Gestione e rilevazione degli errori in Python</h1>
 <small>
     <a href="?print-pdf&pdfSeparateFragments=false">
         <i class="bi bi-printer-fill"></i>
@@ -339,7 +315,7 @@ computer.</strong></p>
 </small>
 <br>
 <small>
-<p>A cura di Nicholas Magi - <code>nicholas.magi[at]...[dot]com</code></p>
+<p>A cura di Nicholas Magi - <code>nicholas.magi[at]...[dot]it</code></p>
 </small>
 </section>
 
@@ -347,6 +323,676 @@ computer.</strong></p>
     class="studentSlide"
     data-template="student">
   
+<h2 id="attività">Attività</h2>
+<p>Simuliamo il flusso di un&rsquo;applicazione che permette ad un utente di ordinare pizze.</p>
+<p>Per semplicità, non specifichiamo il gusto della pizza e sappiamo che tutte costano <strong>€8</strong>.</p>
+<br>
+<h3 id="organizzazione">Organizzazione</h3>
+<p>Classe divisa in <strong>coppie</strong>, dove ciascun individuo ha un <strong>ruolo</strong>:</p>
+
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="a-cassiereapp"><strong>(A) Cassiere+app</strong></h4>
+<p>Si interfaccia con l&rsquo;utente, riceve la sua ordinazione (quante pizze vuole) e gli restituisce il totale da pagare.</p>
+</div>
+<div class='col '><h4 id="b-cuoco"><strong>(B) Cuoco</strong></h4>
+<p>Riceve la comanda dal cassiere, controlla se può soddisfare l&rsquo;ordine e restituisce il numero di pizze preparate. <strong>Se si verifica un problema durante la preparazione, si impegna comunque a restituire un numero</strong>.</p>
+</div>
+</div>
+</div>
+<blockquote>
+<p>Per il trio: riuscite a spezzare &ldquo;<strong>cassiere</strong>&rdquo; da &ldquo;<strong>app</strong>&rdquo;</p>
+</blockquote>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="una-schematizzazione">Una <strong>schematizzazione</strong></h2>
+<div class="mermaid">sequenceDiagram
+    autonumber
+    actor Cliente
+    participant B as Cassa/App
+    participant A as Cucina
+
+    Cliente->>B: Ordina pizze
+    B->>A: Richiede preparazione
+    A-->>B: Conferma e quantità
+    B->>B: Calcola il totale (pizze × prezzo)
+    B-->>Cliente: Comunica conto e conferma
+</div>
+
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="simulazione"><strong>Simulazione</strong>:</h2>
+<p><strong>Ordine #01</strong>: 2 pizze!</p>
+</section>
+
+
+<section data-shortcode-section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi-1"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+<h4 id="ordine-02">Ordine #02</h4>
+<p>4 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi-2"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+<h4 id="ordine-02">Ordine #02</h4>
+<p>4 pizze!</p>
+<h4 id="ordine-03">Ordine #03</h4>
+<p>10 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi-3"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+<h4 id="ordine-02">Ordine #02</h4>
+<p>4 pizze!</p>
+<h4 id="ordine-03">Ordine #03</h4>
+<p>10 pizze!</p>
+<h4 id="ordine-04">Ordine #04</h4>
+<p>12 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi-4"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+<h4 id="ordine-02">Ordine #02</h4>
+<p>4 pizze!</p>
+<h4 id="ordine-03">Ordine #03</h4>
+<p>10 pizze!</p>
+<h4 id="ordine-04">Ordine #04</h4>
+<p>12 pizze!</p>
+<h4 id="ordine-05">Ordine #05</h4>
+<p>7 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+
+</section>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="totali-raccolti-per-ogni-ordine">Totali raccolti per ogni ordine?</h2>
+
+
+<span class='fragment ' ><p><em>Secondo i miei calcoli&hellip;</em></p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Ordine #01</th>
+          <th style="text-align: center">Ordine #02</th>
+          <th style="text-align: center">Ordine #03</th>
+          <th style="text-align: center">Ordine #04</th>
+          <th style="text-align: center">Ordine #05</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">€40</td>
+          <td style="text-align: center">€32</td>
+          <td style="text-align: center"><mark>€72 (<strong>??</strong>)</mark></td>
+          <td style="text-align: center"><mark>€0 (<strong>??</strong>)</mark></td>
+          <td style="text-align: center"><mark>€0 (<strong>??</strong>)</mark></td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<ul>
+<li>Per <strong>ordine #03</strong> mi aspettavo <strong>€80</strong>!</li>
+<li>Per <strong>ordine #04</strong> mi aspettavo <strong>€92</strong>!</li>
+<li>Per <strong>ordine #05</strong> mi aspettavo <strong>€56</strong>!</li>
+</ul>
+</span>
+
+
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="cassiereapp-la-cucina-ha-avuto-dei-problemi">Cassiere+App: La cucina ha avuto dei problemi&hellip;</h2>
+<p>L&rsquo;unico modo per segnalarvelo è stato tramite il risultato condiviso all&rsquo;utente!</p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="pessima-pratica">Pessima pratica</h2>
+<p><em>Mescolare</em> la <strong>rilevazione dell&rsquo;errore</strong> con il <strong>flusso dei dati</strong> crea confusione! <br>
+(<em>e tanti altri problemi</em>)
+<br></p>
+<p>Dubbi come:</p>
+<blockquote>
+<p>ma il valore che leggo è effettivamente quello che il programma doveva restituirmi oppure è il risultato di un errore da gestire?</p>
+</blockquote>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="come-potremmo-ovviare">Come potremmo ovviare?</h2>
+
+
+<span class='fragment ' ><p>Potremmo pensare ad un <em>flusso dell&rsquo;errore</em> <strong>separato</strong> da quello dei <em>dati</em>!</p>
+</span>
+
+
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="nuova-regola-la-carta-dell">Nuova regola: la &ldquo;<strong>carta dell&rsquo;errore</strong>&rdquo;</h2>
+
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><p><img src="imgs/red-card.png" alt=""></p>
+</div>
+<div class='col '><h3 id="cucina">Cucina</h3>
+<p>D&rsquo;ora in poi, se la cucina ha qualche problema è autorizzata a lanciarvi in testa la carta dell&rsquo;errore.
+(<em>attenzione a non essere troppo maneschi</em>)</p>
+<br>
+<p>È inoltre libera di aggiungere un piccolo post-it che indichi, con una <strong><u>brevissima</u> descrizione</strong>, la natura del problema (p.e. &ldquo;Pizzaiolo KO&rdquo;)</p>
+</div>
+<div class='col '><h3 id="cassiereapp">Cassiere+App</h3>
+<p>Quando ricevete un <strong>risultato anomalo</strong> della cucina (<em>ora opportunamente segnalato</em>), mostratelo all&rsquo;utente!</p>
+</div>
+</div>
+</div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="proviamo-di-nuovo"><strong>Proviamo di nuovo!</strong></h2>
+</section>
+
+
+<section data-shortcode-section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi-1"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+<h4 id="ordine-02">Ordine #02</h4>
+<p>4 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi-2"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+<h4 id="ordine-02">Ordine #02</h4>
+<p>4 pizze!</p>
+<h4 id="ordine-03">Ordine #03</h4>
+<p>10 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi-3"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+<h4 id="ordine-02">Ordine #02</h4>
+<p>4 pizze!</p>
+<h4 id="ordine-03">Ordine #03</h4>
+<p>10 pizze!</p>
+<h4 id="ordine-04">Ordine #04</h4>
+<p>12 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+<h2 id="cucina-tocca-a-voi-4"><strong>CUCINA: Tocca a voi!</strong></h2>
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h4 id="ordine-01">Ordine #01</h4>
+<p>5 pizze!</p>
+<h4 id="ordine-02">Ordine #02</h4>
+<p>4 pizze!</p>
+<h4 id="ordine-03">Ordine #03</h4>
+<p>10 pizze!</p>
+<h4 id="ordine-04">Ordine #04</h4>
+<p>12 pizze!</p>
+<h4 id="ordine-05">Ordine #05</h4>
+<p>7 pizze!</p>
+</div>
+<div class='col '><iframe src="https://didattica-nm.github.io/countdown/" class="w-full" height="800" width="1000"></iframe>
+</div>
+</div>
+</div>
+
+</section>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="nuovi-totali-raccolti-per-ogni-ordine">(<em>nuovi</em>) Totali raccolti per ogni ordine?</h2>
+
+
+<span class='fragment ' ><p><em>Secondo i miei calcoli&hellip;</em></p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Ordine #01</th>
+          <th style="text-align: center">Ordine #02</th>
+          <th style="text-align: center">Ordine #03</th>
+          <th style="text-align: center">Ordine #04</th>
+          <th style="text-align: center">Ordine #05</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">€40</td>
+          <td style="text-align: center">€32</td>
+          <td style="text-align: center"><del>€72</del></td>
+          <td style="text-align: center"><del>€0</del></td>
+          <td style="text-align: center"><del>€0</del></td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<ul>
+<li>Per <strong>ordine #03</strong> ricevo <strong>carta errore</strong> - post-it <em>&ldquo;Ingredienti KO&rdquo;</em></li>
+<li>Per <strong>ordine #04</strong> ricevo <strong>carta errore</strong> - post-it <em>&ldquo;Forno KO&rdquo;</em></li>
+<li>Per <strong>ordine #05</strong> ricevo <strong>carta errore</strong> - post-it <em>&ldquo;Forno KO&rdquo;</em></li>
+</ul>
+</span>
+
+
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="in-unapplicazione-reale">In un&rsquo;applicazione reale&hellip;</h2>
+<p><img src="imgs/deliveroo-error.png" alt=""></p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="back-to-python">Back to <strong>Python</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff6ac1">import</span> random
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>PREZZO_PIZZA <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">8</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>pizze_disponibili <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">5</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#78787e"># 1. RILEVAZIONE (Cucina: controlla le regole e prepara le pizze)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cucina</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#ff6ac1">global</span> pizze_disponibili
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    forno_acceso <span style="color:#ff6ac1">=</span> random<span style="color:#ff6ac1">.</span>choice([<span style="color:#ff6ac1">True</span>, <span style="color:#ff6ac1">False</span>])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#ff6ac1">if</span> <span style="color:#ff6ac1">not</span> forno_acceso:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#ff6ac1">return</span> <span style="color:#ff9f43">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#ff6ac1">if</span> num_pizze <span style="color:#ff6ac1">&gt;</span> pizze_disponibili:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#ff6ac1">return</span> <span style="color:#ff9f43">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    pizze_disponibili <span style="color:#ff6ac1">-=</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#ff6ac1">return</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#78787e"># 2. LIVELLO INTERMEDIO (Cassiere: calcola il conto, nessun controllo errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cassiere</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    pizze_pronte <span style="color:#ff6ac1">=</span> cucina(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    totale <span style="color:#ff6ac1">=</span> pizze_pronte <span style="color:#ff6ac1">*</span> PREZZO_PIZZA
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#ff6ac1">return</span> totale
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#78787e"># 3. GESTIONE (App Cliente: parla con l&#39;utente e gestisce gli errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">app</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    conto <span style="color:#ff6ac1">=</span> cassiere(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Ordine confermato! Totale:&#34;</span>, conto, <span style="color:#5af78e">&#34;euro&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>app(<span style="color:#ff9f43">2</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>app(<span style="color:#ff9f43">4</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span></code></pre></div><p>Proviamo a seguire il flusso su <a href="https://pythontutor.com/visualize.html#code=import%20random%0APREZZO_PIZZA%20%3D%208%0Apizze_disponibili%20%3D%205%0A%0A%23%201.%20RILEVAZIONE%20%28Cucina%3A%20controlla%20le%20regole%20e%20prepara%20le%20pizze%29%0Adef%20cucina%28num_pizze%29%3A%0A%20%20%20%20forno_acceso%20%3D%20random.choice%28%5BTrue,%20False%5D%29%0A%20%20%20%20if%20not%20forno_acceso%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20if%20num_pizze%20%3E%20pizze_disponibili%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20num_pizze%20-%3D%201%0A%20%20%20%20return%20num_pizze%0A%0A%23%202.%20LIVELLO%20INTERMEDIO%20%28Cassiere%3A%20calcola%20il%20conto,%20nessun%20controllo%20errori%29%0Adef%20cassiere%28num_pizze%29%3A%0A%20%20%20%20pizze_pronte%20%3D%20cucina%28num_pizze%29%0A%20%20%20%20totale%20%3D%20pizze_pronte%20*%20PREZZO_PIZZA%0A%20%20%20%20return%20totale%0A%0A%23%203.%20GESTIONE%20%28App%20Cliente%3A%20parla%20con%20l'utente%20e%20gestisce%20gli%20errori%29%0Adef%20app%28num_pizze%29%3A%0A%20%20%20%20conto%20%3D%20cassiere%28num_pizze%29%0A%20%20%20%20print%28%22App%20-%3E%20Ordine%20confermato!%20Totale%3A%22,%20conto,%20%22euro%22%29%0A%0Aapp%282%29%20%23%20Cosa%20stampa%3F%20Provate%20con%20i%20numeri%20degli%20ordini%20di%20prima%0Aapp%284%29%20%23%20Cosa%20stampa%3F%20Provate%20con%20i%20numeri%20degli%20ordini%20di%20prima&amp;mode=edit&amp;origin=opt-frontend.js&amp;primitivesAsObjects=true&amp;py=311"><strong>[Python Tutor]</strong></a></p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="dove-rilevo-lerrore">Dove <strong>rilevo</strong> l&rsquo;errore?</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff6ac1">import</span> random
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>PREZZO_PIZZA <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">8</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>pizze_disponibili <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">5</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#78787e"># 1. RILEVAZIONE (Cucina: controlla le regole e prepara le pizze)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cucina</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#ff6ac1">global</span> pizze_disponibili
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    forno_acceso <span style="color:#ff6ac1">=</span> random<span style="color:#ff6ac1">.</span>choice([<span style="color:#ff6ac1">True</span>, <span style="color:#ff6ac1">False</span>])
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#ff6ac1">if</span> <span style="color:#ff6ac1">not</span> forno_acceso:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#ff6ac1">return</span> <span style="color:#ff9f43">0</span>
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#ff6ac1">if</span> num_pizze <span style="color:#ff6ac1">&gt;</span> pizze_disponibili:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#ff6ac1">return</span> <span style="color:#ff9f43">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    pizze_disponibili <span style="color:#ff6ac1">-=</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#ff6ac1">return</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#78787e"># 2. LIVELLO INTERMEDIO (Cassiere: calcola il conto, nessun controllo errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cassiere</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    pizze_pronte <span style="color:#ff6ac1">=</span> cucina(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    totale <span style="color:#ff6ac1">=</span> pizze_pronte <span style="color:#ff6ac1">*</span> PREZZO_PIZZA
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#ff6ac1">return</span> totale
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#78787e"># 3. GESTIONE (App Cliente: parla con l&#39;utente e gestisce gli errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">app</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    conto <span style="color:#ff6ac1">=</span> cassiere(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Ordine confermato! Totale:&#34;</span>, conto, <span style="color:#5af78e">&#34;euro&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>app(<span style="color:#ff9f43">2</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>app(<span style="color:#ff9f43">4</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span></code></pre></div></section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="dove-dovrei-gestire-lerrore">Dove (dovrei) <strong>gestire</strong> l&rsquo;errore?</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff6ac1">import</span> random
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>PREZZO_PIZZA <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">8</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>pizze_disponibili <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">5</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#78787e"># 1. RILEVAZIONE (Cucina: controlla le regole e prepara le pizze)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cucina</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#ff6ac1">global</span> pizze_disponibili
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    forno_acceso <span style="color:#ff6ac1">=</span> random<span style="color:#ff6ac1">.</span>choice([<span style="color:#ff6ac1">True</span>, <span style="color:#ff6ac1">False</span>])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#ff6ac1">if</span> <span style="color:#ff6ac1">not</span> forno_acceso:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#ff6ac1">return</span> <span style="color:#ff9f43">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#ff6ac1">if</span> num_pizze <span style="color:#ff6ac1">&gt;</span> pizze_disponibili:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#ff6ac1">return</span> <span style="color:#ff9f43">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    pizze_disponibili <span style="color:#ff6ac1">-=</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#ff6ac1">return</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#78787e"># 2. LIVELLO INTERMEDIO (Cassiere: calcola il conto, nessun controllo errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cassiere</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    pizze_pronte <span style="color:#ff6ac1">=</span> cucina(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    totale <span style="color:#ff6ac1">=</span> pizze_pronte <span style="color:#ff6ac1">*</span> PREZZO_PIZZA
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#ff6ac1">return</span> totale
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#78787e"># 3. GESTIONE (App Cliente: parla con l&#39;utente e gestisce gli errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">app</span>(num_pizze):
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    conto <span style="color:#ff6ac1">=</span> cassiere(num_pizze)
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Ordine confermato! Totale:&#34;</span>, conto, <span style="color:#5af78e">&#34;euro&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>app(<span style="color:#ff9f43">2</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>app(<span style="color:#ff9f43">4</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span></code></pre></div></section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="le-eccezioni-in-python">Le <strong>eccezioni</strong> in Python</h2>
+
+<div class="container-fluid m-0 p-0">
+    <div class='row '><div class='col '><h3 id="rilevazione--raise-valueerror">Rilevazione <br> <code>raise ValueError()</code></h3>
+<p>Istruzione utilizzata per <strong>lanciare un errore</strong>.</p>
+<ul>
+<li>Dentro alle parentesi di <code>ValueError()</code> posso passare una stringa che indica il <strong>messaggio dell&rsquo;errore</strong>
+<ul>
+<li><em>come il breve post-it di prima!</em></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">divisione</span>(numeratore, denominatore):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#ff6ac1">if</span> denominatore <span style="color:#ff6ac1">==</span> <span style="color:#ff9f43">0</span>:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Non posso dividere per 0!&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#ff6ac1">return</span> numeratore <span style="color:#ff6ac1">/</span> denominatore
+</span></span></code></pre></div></div>
+<div class='col '><h3 id="gestione--tryexcept">Gestione <br> <code>try/except</code></h3>
+<p>Prova a fare qualcosa di rischioso in <code>try</code>, gestisci l&rsquo;errore in <code>except</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">divisione</span>(numeratore, denominatore):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#ff6ac1">if</span> denominatore <span style="color:#ff6ac1">==</span> <span style="color:#ff9f43">0</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Non posso dividere per 0!&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#ff6ac1">return</span> numeratore <span style="color:#ff6ac1">/</span> denominatore
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#ff6ac1">try</span>:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    risultato <span style="color:#ff6ac1">=</span> divisione(<span style="color:#ff9f43">3</span>, <span style="color:#ff9f43">0</span>)
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;Ho diviso 3 per 0, ho ottenuto&#34;</span>, risultato)
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#ff6ac1">except</span> ValueError <span style="color:#ff6ac1">as</span> errore:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;No! Qualcosa &#34;</span> <span style="color:#ff6ac1">+</span>
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#5af78e">&#34; è andato storto durante la divisione:&#34;</span>, errore)
+</span></span></code></pre></div></div>
+</div>
+</div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="il-codice-di-prima--con-la-rilevazione-degli-errori">Il codice di prima, <br> con la <strong>rilevazione degli errori</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff6ac1">import</span> random
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>PREZZO_PIZZA <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">8</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>pizze_disponibili <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">5</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#78787e"># 1. RILEVAZIONE (Cucina: controlla le regole e prepara le pizze)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cucina</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#ff6ac1">global</span> pizze_disponibili
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    forno_acceso <span style="color:#ff6ac1">=</span> random<span style="color:#ff6ac1">.</span>choice([<span style="color:#ff6ac1">True</span>, <span style="color:#ff6ac1">False</span>])
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#ff6ac1">if</span> <span style="color:#ff6ac1">not</span> forno_acceso:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Forno KO&#34;</span>)
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#ff6ac1">if</span> num_pizze <span style="color:#ff6ac1">&gt;</span> pizze_disponibili:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Ingredienti KO&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    pizze_disponibili <span style="color:#ff6ac1">-=</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#ff6ac1">return</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#78787e"># 2. LIVELLO INTERMEDIO (Cassiere: calcola il conto, nessun controllo errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cassiere</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    pizze_pronte <span style="color:#ff6ac1">=</span> cucina(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    totale <span style="color:#ff6ac1">=</span> pizze_pronte <span style="color:#ff6ac1">*</span> PREZZO_PIZZA
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#ff6ac1">return</span> totale
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#78787e"># 3. GESTIONE (App Cliente: parla con l&#39;utente e gestisce gli errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">app</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    conto <span style="color:#ff6ac1">=</span> cassiere(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Ordine confermato! Totale:&#34;</span>, conto, <span style="color:#5af78e">&#34;euro&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>app(<span style="color:#ff9f43">2</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>app(<span style="color:#ff9f43">4</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span></code></pre></div></section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="come-posso-implementare--la-gestione-dell">Come posso implementare <br> la <strong>gestione dell&rsquo;errore</strong>?</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff6ac1">import</span> random
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>PREZZO_PIZZA <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">8</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>pizze_disponibili <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">5</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#78787e"># 1. RILEVAZIONE (Cucina: controlla le regole e prepara le pizze)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cucina</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#ff6ac1">global</span> pizze_disponibili
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    forno_acceso <span style="color:#ff6ac1">=</span> random<span style="color:#ff6ac1">.</span>choice([<span style="color:#ff6ac1">True</span>, <span style="color:#ff6ac1">False</span>])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#ff6ac1">if</span> <span style="color:#ff6ac1">not</span> forno_acceso:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Forno KO&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#ff6ac1">if</span> num_pizze <span style="color:#ff6ac1">&gt;</span> pizze_disponibili:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Ingredienti KO&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    pizze_disponibili <span style="color:#ff6ac1">-=</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#ff6ac1">return</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#78787e"># 2. LIVELLO INTERMEDIO (Cassiere: calcola il conto, nessun controllo errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cassiere</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    pizze_pronte <span style="color:#ff6ac1">=</span> cucina(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    totale <span style="color:#ff6ac1">=</span> pizze_pronte <span style="color:#ff6ac1">*</span> PREZZO_PIZZA
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#ff6ac1">return</span> totale
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#78787e"># 3. GESTIONE (App Cliente: parla con l&#39;utente e gestisce gli errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">app</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    conto <span style="color:#ff6ac1">=</span> cassiere(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Ordine confermato! Totale:&#34;</span>, conto, <span style="color:#5af78e">&#34;euro&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>app(<span style="color:#ff9f43">2</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>app(<span style="color:#ff9f43">4</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span></code></pre></div></section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<h2 id="e-se-in-cucinanum_pizze-num_pizze-leq-0">E se, in <code>cucina(num_pizze)</code>, <br><code>num_pizze</code> $\leq 0$?</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff6ac1">import</span> random
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>PREZZO_PIZZA <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">8</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>pizze_disponibili <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">5</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#78787e"># 1. RILEVAZIONE (Cucina: controlla le regole e prepara le pizze)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cucina</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#ff6ac1">global</span> pizze_disponibili
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    forno_acceso <span style="color:#ff6ac1">=</span> random<span style="color:#ff6ac1">.</span>choice([<span style="color:#ff6ac1">True</span>, <span style="color:#ff6ac1">False</span>])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#ff6ac1">if</span> <span style="color:#ff6ac1">not</span> forno_acceso:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Forno KO&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#ff6ac1">if</span> num_pizze <span style="color:#ff6ac1">&gt;</span> pizze_disponibili:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Ingredienti KO&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    pizze_disponibili <span style="color:#ff6ac1">-=</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#ff6ac1">return</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#78787e"># 2. LIVELLO INTERMEDIO (Cassiere: calcola il conto, nessun controllo errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cassiere</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    pizze_pronte <span style="color:#ff6ac1">=</span> cucina(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    totale <span style="color:#ff6ac1">=</span> pizze_pronte <span style="color:#ff6ac1">*</span> PREZZO_PIZZA
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#ff6ac1">return</span> totale
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#78787e"># 3. GESTIONE (App Cliente: parla con l&#39;utente e gestisce gli errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">app</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    <span style="color:#ff6ac1">try</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>        conto <span style="color:#ff6ac1">=</span> cassiere(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>        <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Ordine confermato! Totale:&#34;</span>, conto, <span style="color:#5af78e">&#34;euro&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>    <span style="color:#ff6ac1">except</span> ValueError <span style="color:#ff6ac1">as</span> errore:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>        <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Errore! Ordine non confermato:&#34;</span>, errore)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>app(<span style="color:#ff9f43">2</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>app(<span style="color:#ff9f43">4</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span></code></pre></div></section>
+
+<section data-noprocess data-shortcode-slide
+    class="studentSlide"
+    data-template="student">
+  
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff6ac1">import</span> random
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>PREZZO_PIZZA <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">8</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>pizze_disponibili <span style="color:#ff6ac1">=</span> <span style="color:#ff9f43">5</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#78787e"># 1. RILEVAZIONE (Cucina: controlla le regole e prepara le pizze)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cucina</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#ff6ac1">global</span> pizze_disponibili
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    forno_acceso <span style="color:#ff6ac1">=</span> random<span style="color:#ff6ac1">.</span>choice([<span style="color:#ff6ac1">True</span>, <span style="color:#ff6ac1">False</span>])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#ff6ac1">if</span> <span style="color:#ff6ac1">not</span> forno_acceso:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Forno KO&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#ff6ac1">if</span> num_pizze <span style="color:#ff6ac1">&gt;</span> pizze_disponibili:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Ingredienti KO&#34;</span>)
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#ff6ac1">if</span> num_pizze <span style="color:#ff6ac1">&lt;=</span> <span style="color:#ff9f43">0</span>:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>        <span style="color:#ff6ac1">raise</span> ValueError(<span style="color:#5af78e">&#34;Richiesto un numero invalido di pizze&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    pizze_disponibili <span style="color:#ff6ac1">-=</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    <span style="color:#ff6ac1">return</span> num_pizze
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#78787e"># 2. LIVELLO INTERMEDIO (Cassiere: calcola il conto, nessun controllo errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">cassiere</span>(num_pizze):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    pizze_pronte <span style="color:#ff6ac1">=</span> cucina(num_pizze)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    totale <span style="color:#ff6ac1">=</span> pizze_pronte <span style="color:#ff6ac1">*</span> PREZZO_PIZZA
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    <span style="color:#ff6ac1">return</span> totale
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#78787e"># 3. GESTIONE (App Cliente: parla con l&#39;utente e gestisce gli errori)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span><span style="color:#ff6ac1">def</span> <span style="color:#57c7ff">app</span>(num_pizze):
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>    <span style="color:#ff6ac1">try</span>:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>        conto <span style="color:#ff6ac1">=</span> cassiere(num_pizze)
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>        <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Ordine confermato! Totale:&#34;</span>, conto, <span style="color:#5af78e">&#34;euro&#34;</span>)
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>    <span style="color:#ff6ac1">except</span> ValueError <span style="color:#ff6ac1">as</span> errore:
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>        <span style="color:#ff5c57">print</span>(<span style="color:#5af78e">&#34;App -&gt; Errore! Ordine non confermato:&#34;</span>, errore)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>app(<span style="color:#ff9f43">2</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>app(<span style="color:#ff9f43">4</span>) <span style="color:#78787e"># Cosa stampa? Provate con i numeri degli ordini di prima</span>
+</span></span></code></pre></div><p>Proviamo a seguire il flusso su <a href="https://pythontutor.com/"><strong>[Python Tutor]</strong></a></p>
 </section>
 
   
