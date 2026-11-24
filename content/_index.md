@@ -237,6 +237,29 @@ La lezione si svolge in compresenza con il collega di classe A041.
 
 ---
 
+## Fase 1. Unplugged: La pizzeria a coppie
+
+Esempio di schede distribuite
+{{% multicol %}}
+
+{{% col %}}
+![](imgs/comanda.png)
+{{% /col %}}
+
+{{% col %}}
+![](imgs/pizzeria.png)
+
+<small>
+
+ _*massimo **18 pizze**_
+
+</small>
+{{% /col %}}
+
+{{% /multicol %}}
+
+---
+
 ## Valutazione formativa
 
 Somministrata tramite **piattaforma digitale dedicata** (*Moodle/custom*)
@@ -256,7 +279,7 @@ Somministrata tramite **piattaforma digitale dedicata** (*Moodle/custom*)
 
 ---
 
-## Piano B: riadattamento dell'attività
+## **Piano B**: riadattamento dell'attività
 Nel caso la valutazione formativa rilevasse **diffuse situazioni di fragilità**.
 
 {{% multicol %}}
@@ -277,11 +300,15 @@ Lavorano, guidati dal collega A041, all'estensione di `app()`, aggiungendo qualc
 {{% multicol %}}
 {{% col %}}
 #### Strategie
-
+- **Attività unplugged e micro fasi scandite** per incanalare l'irrequietezza dei 2 studenti BES con ADHD
+- **Coppie fisse tutta l'ora** - zero transizioni logistiche;
+  - i due studenti BES con ADHD sono inseriti in coppie distinte con partner collaborativi
+- **Valutazione libera**, senza ansia da cronometro e con eventuale recupero a basso carico cognitivo
 {{% /col %}}
 {{% col %}}
 #### Strumenti
-
+- Materiale del docente sempre consultabile per esempi sull'utilizzo del nuovo costrutto
+- Report finale scaricabile e consultabile anche in un secondo momento 
 {{% /col %}}
 {{% /multicol %}}
 
@@ -296,10 +323,6 @@ Lavorano, guidati dal collega A041, all'estensione di `app()`, aggiungendo qualc
 - Fogli di carta e penne
 - Slides del docente
 - pythontutor.com
-
----
-
-## Bibliografia
 
 ---
 
